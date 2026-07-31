@@ -1,62 +1,167 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "About Vardena.tech | Humanoid Robotics & AI Media";
+const pageDescription = "Learn about Vardena.tech: bridging cutting-edge humanoid robotics, AI fights, and broad global audiences through arcade-style commentary.";
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={pageTitle} description={pageDescription} />
+	</head>
+	<body>
+		<Header />
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+		<main>
+			<section class="about-section">
+				<div class="hud-subtitle">// PROJECT MISSION & VISION</div>
+				<h1>About Vardena.tech</h1>
+				<p class="about-lead">
+					Vardena.tech is an independent media initiative and personal brand focused on humanoid robot combat, physical artificial intelligence, and hardware engineering stories.
+				</p>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+				<div class="hud-box about-card">
+					<h2>Our Mission</h2>
+					<p>
+						Humanoid robotics is advancing at unprecedented speed, moving from laboratory prototypes to competitive arenas and real-world environments. However, traditional media coverage often sits at two extremes: overly complex technical papers or sensationalized clips.
+					</p>
+					<p>
+						Vardena.tech bridges this gap. We craft dynamic, arcade-inspired commentary formats (featuring HUD graphics, torque counters, and energy meters) that capture the excitement of robot fights while maintaining deep respect for the underlying engineering.
+					</p>
+				</div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+				<div class="about-grid">
+					<div class="hud-box pillar-card">
+						<div class="pillar-num">01</div>
+						<h3>Arcade-Style Presentation</h3>
+						<p>
+							We bring high-energy visual formats to short-form and long-form video, framing matches with health bars, combo statistics, and structural damage analysis.
+						</p>
+					</div>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+					<div class="hud-box pillar-card">
+						<div class="pillar-num">02</div>
+						<h3>Accessible Engineering</h3>
+						<p>
+							We translate complex robotics concepts—such as inverse kinematics, actuator bandwidth, balance controllers, and sensor fusion—into intuitive, engaging explanations.
+						</p>
+					</div>
+
+					<div class="hud-box pillar-card">
+						<div class="pillar-num">03</div>
+						<h3>Ethical & Authorized Media</h3>
+						<p>
+							We prioritize fair use, proper team attribution, and official media licensing with robotics leagues, teams, and tournament organizers.
+						</p>
+					</div>
+				</div>
+
+				<div class="hud-box cta-box">
+					<div class="cta-content">
+						<h3>Looking to Showcase Your Robotics Brand or League?</h3>
+						<p>Explore opportunities for official video permissions, hardware features, and press coverage.</p>
+						<a href="/contact" class="btn-primary">Get in Touch</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 3rem 1.5rem;
+	}
+
+	.hud-subtitle {
+		font-family: var(--font-hud);
+		font-size: 0.85rem;
+		color: var(--accent-cyan);
+		letter-spacing: 0.1em;
+		margin-bottom: 0.5rem;
+	}
+
+	h1 {
+		margin-bottom: 0.75rem;
+	}
+
+	.about-lead {
+		font-size: 1.15rem;
+		color: var(--text-muted);
+		max-width: 750px;
+		margin-bottom: 2.5rem;
+	}
+
+	.about-card {
+		margin-bottom: 3rem;
+	}
+
+	.about-card h2 {
+		color: var(--accent-cyan);
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+	}
+
+	.about-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.75rem;
+		margin-bottom: 3rem;
+	}
+
+	.pillar-card {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.pillar-num {
+		font-family: var(--font-hud);
+		font-size: 1.25rem;
+		font-weight: 800;
+		color: var(--accent-magenta);
+		margin-bottom: 0.5rem;
+	}
+
+	.pillar-card h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.pillar-card p {
+		font-size: 0.95rem;
+		margin: 0;
+	}
+
+	.cta-box {
+		background: linear-gradient(135deg, rgba(18, 24, 36, 0.95) 0%, rgba(10, 13, 20, 0.95) 100%);
+		border-color: var(--border-hud-active);
+		text-align: center;
+		padding: 2.5rem;
+	}
+
+	.cta-content h3 {
+		font-size: 1.4rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.cta-content p {
+		margin-bottom: 1.5rem;
+	}
+
+	@media (max-width: 600px) {
+		main {
+			padding: 2rem 1rem;
+		}
+		.cta-box {
+			padding: 1.5rem;
+		}
+	}
+</style>

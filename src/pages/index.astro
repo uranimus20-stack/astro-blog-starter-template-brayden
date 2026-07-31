@@ -12,39 +12,543 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header />
+		
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<!-- HERO SECTION -->
+			<section class="hero-section" aria-labelledby="hero-heading">
+				<div class="hero-container">
+					<div class="hero-content">
+						<div class="hud-badge">
+							<span class="pulse-dot"></span>
+							<span class="badge-text">HUMANOID COMBAT & AI COMMENTARY</span>
+						</div>
+						<h1 id="hero-heading">
+							Where High-Tech Robotics Meets <span class="cyan-glow">Arcade Energy</span>
+						</h1>
+						<p class="hero-lead">
+							Vardena.tech crafts high-energy, gaming-inspired commentary and visual show formats for humanoid robot combat—explaining cutting-edge robotics to a global audience.
+						</p>
+						<div class="hero-cta-group">
+							<a href="/contact" class="btn-primary">
+								<span>Partner with us</span>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+							</a>
+							<a href="#mission" class="btn-secondary">
+								<span>Explore the project</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="hero-hud-graphic" aria-hidden="true">
+						<div class="hud-frame">
+							<div class="hud-header">
+								<span class="hud-title">SYSTEM // COMBAT_HUD_V1</span>
+								<span class="hud-timer">00:59.9</span>
+							</div>
+							<div class="hud-meters">
+								<div class="meter-block">
+									<div class="meter-label">P1 // STABILITY</div>
+									<div class="meter-bar"><div class="fill cyan" style="width: 88%;"></div></div>
+								</div>
+								<div class="meter-block">
+									<div class="meter-label">P2 // TORQUE OUTPUT</div>
+									<div class="meter-bar"><div class="fill magenta" style="width: 76%;"></div></div>
+								</div>
+							</div>
+							<div class="hud-visual-center">
+								<div class="hud-grid-lines"></div>
+								<div class="hud-target-ring"></div>
+								<div class="hud-popup-text">COMBO x4</div>
+								<div class="hud-damage-pop">+140 N·m</div>
+							</div>
+							<div class="hud-footer">
+								<span>AI_METRICS: ACTIVE</span>
+								<span>FRAME_RATE: 60FPS</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- WHAT WE DO SECTION -->
+			<section class="section-padding" aria-labelledby="what-we-do-heading">
+				<div class="section-header">
+					<div class="hud-subtitle">// CORE FORMATS</div>
+					<h2 id="what-we-do-heading">What We Do</h2>
+					<p>Crafted specifically for fast-paced, high-engagement short-form media (1+ minute dynamic formats).</p>
+				</div>
+
+				<div class="grid-3">
+					<div class="hud-box card">
+						<div class="card-icon cyan-icon">
+							<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+						</div>
+						<h3>Robot Fight Commentary</h3>
+						<p>
+							Dynamic, match-by-match breakdowns enhanced with HUD overlays, health bars, combo indicators, and damage pop-ups that turn complex mechanics into gripping spectacle.
+						</p>
+					</div>
+
+					<div class="hud-box card">
+						<div class="card-icon violet-icon">
+							<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+						</div>
+						<h3>Robotics & AI Stories</h3>
+						<p>
+							Digestible explanations of actuators, equilibrium controls, motor torque, and neural network updates—making real engineering accessible without losing technical accuracy.
+						</p>
+					</div>
+
+					<div class="hud-box card">
+						<div class="card-icon magenta-icon">
+							<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l5 5-5 5"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></svg>
+						</div>
+						<h3>Visual Show Format</h3>
+						<p>
+							An immersive arcade-style visual wrapping that highlights human-robot interaction, team engineering passion, and the evolving spirit of competitive robotics.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- WHY VARDENA / MISSION SECTION -->
+			<section id="mission" class="section-padding section-alt" aria-labelledby="why-vardena-heading">
+				<div class="section-header">
+					<div class="hud-subtitle">// OUR APPROACH</div>
+					<h2 id="why-vardena-heading">Why Vardena</h2>
+				</div>
+
+				<div class="hud-box mission-box">
+					<div class="mission-grid">
+						<div class="mission-item">
+							<div class="mission-num">01</div>
+							<h4>Tech Without Boredom</h4>
+							<p>We strip away dry academic jargon in favor of clear, high-energy commentary that excites both casual viewers and hardware enthusiasts.</p>
+						</div>
+						<div class="mission-item">
+							<div class="mission-num">02</div>
+							<h4>Respect for Engineers</h4>
+							<p>Showmanship never compromises respect. We celebrate the hardware developers, roboticists, and combat league creators pushing the boundaries of physical AI.</p>
+						</div>
+						<div class="mission-item">
+							<div class="mission-num">03</div>
+							<h4>Global English Focus</h4>
+							<p>Built from day one for an international audience, enabling robotics leagues and innovators to extend their reach across global markets.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- FOR PARTNERS SECTION -->
+			<section class="section-padding" aria-labelledby="for-partners-heading">
+				<div class="hud-box partners-banner">
+					<div class="partners-content">
+						<div class="hud-subtitle">// MEDIA & INDUSTRY COLLABORATION</div>
+						<h2 id="for-partners-heading">For Partners & Robotics Leagues</h2>
+						<p>
+							We collaborate with robotics builders, tournament organizers, and technology brands. We are actively seeking official media permissions, fight coverage rights, press access, and hardware update features. All footage and assets are handled with strict attribution and legal compliance.
+						</p>
+						<div class="partners-cta">
+							<a href="/contact" class="btn-primary">
+								<span>Discuss Collaboration</span>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CHANNELS SECTION -->
+			<section class="section-padding section-alt" aria-labelledby="channels-heading">
+				<div class="section-header">
+					<div class="hud-subtitle">// DISTRIBUTION NETWORKS</div>
+					<h2 id="channels-heading">Channels</h2>
+					<p>Our multi-platform content ecosystem is currently being staged for public launch.</p>
+				</div>
+
+				<div class="channels-grid">
+					<div class="channel-card">
+						<div class="channel-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-2.83V7.65a6.34 6.34 0 0 0-5.46 6.3 6.34 6.34 0 0 0 10.86 4.45 6.27 6.27 0 0 0 1.83-4.46V9.45a8.16 8.16 0 0 0 4.88 1.6V7.6a4.85 4.85 0 0 1-2.00-.91z"/></svg>
+						</div>
+						<span class="channel-name">TikTok</span>
+						<span class="channel-status">Launching Soon</span>
+					</div>
+
+					<div class="channel-card">
+						<div class="channel-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+						</div>
+						<span class="channel-name">YouTube</span>
+						<span class="channel-status">Launching Soon</span>
+					</div>
+
+					<div class="channel-card">
+						<div class="channel-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+						</div>
+						<span class="channel-name">Instagram</span>
+						<span class="channel-status">Launching Soon</span>
+					</div>
+
+					<div class="channel-card">
+						<div class="channel-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.07-.75 4.19-1.82 6.98-3.02 8.37-3.6 3.98-1.66 4.81-1.95 5.35-1.96.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.21-.04.34z"/></svg>
+						</div>
+						<span class="channel-name">Telegram</span>
+						<span class="channel-status">Launching Soon</span>
+					</div>
+
+					<div class="channel-card">
+						<div class="channel-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+						</div>
+						<span class="channel-name">LinkedIn</span>
+						<span class="channel-status">Launching Soon</span>
+					</div>
+				</div>
+				<div class="channels-note">
+					<span class="hud-status">[SYS_NOTE]</span> Channels are launching soon. Official URLs will be linked upon public rollout.
+				</div>
+			</section>
 		</main>
+
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		width: 100%;
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+
+	.section-padding {
+		padding: 4rem 0;
+	}
+
+	.section-alt {
+		border-top: 1px solid rgba(0, 240, 255, 0.08);
+		border-bottom: 1px solid rgba(0, 240, 255, 0.08);
+	}
+
+	.section-header {
+		text-align: center;
+		max-width: 700px;
+		margin: 0 auto 3rem;
+	}
+
+	.hud-subtitle {
+		font-family: var(--font-hud);
+		font-size: 0.85rem;
+		color: var(--accent-cyan);
+		letter-spacing: 0.1em;
+		margin-bottom: 0.5rem;
+	}
+
+	/* Hero Styling */
+	.hero-section {
+		padding: 4rem 0 3rem;
+	}
+
+	.hero-container {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.hud-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		background: rgba(0, 240, 255, 0.08);
+		border: 1px solid var(--border-hud);
+		padding: 0.35rem 0.85rem;
+		border-radius: 4px;
+		margin-bottom: 1.5rem;
+		font-family: var(--font-hud);
+		font-size: 0.75rem;
+		color: var(--accent-cyan);
+	}
+
+	.pulse-dot {
+		width: 8px;
+		height: 8px;
+		background-color: var(--accent-green);
+		border-radius: 50%;
+		box-shadow: 0 0 8px var(--accent-green);
+	}
+
+	.cyan-glow {
+		color: var(--accent-cyan);
+		text-shadow: var(--glow-cyan);
+	}
+
+	.hero-lead {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		margin-bottom: 2rem;
+		color: var(--text-muted);
+	}
+
+	.hero-cta-group {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	/* Cyber Graphic Frame */
+	.hero-hud-graphic {
+		position: relative;
+	}
+
+	.hud-frame {
+		background: rgba(18, 24, 36, 0.9);
+		border: 1px solid var(--border-hud-active);
+		border-radius: 8px;
+		padding: 1.5rem;
+		box-shadow: var(--glow-cyan);
+		position: relative;
+	}
+
+	.hud-header {
+		display: flex;
+		justify-content: space-between;
+		font-family: var(--font-hud);
+		font-size: 0.75rem;
+		color: var(--text-dim);
+		border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+		padding-bottom: 0.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.hud-timer {
+		color: var(--accent-magenta);
+	}
+
+	.hud-meters {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.meter-label {
+		font-family: var(--font-hud);
+		font-size: 0.7rem;
+		color: var(--text-muted);
+		margin-bottom: 0.25rem;
+	}
+
+	.meter-bar {
+		height: 8px;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 4px;
+		overflow: hidden;
+	}
+
+	.fill.cyan {
+		height: 100%;
+		background: var(--accent-cyan);
+		box-shadow: var(--glow-cyan);
+	}
+
+	.fill.magenta {
+		height: 100%;
+		background: var(--accent-magenta);
+		box-shadow: var(--glow-magenta);
+	}
+
+	.hud-visual-center {
+		height: 140px;
+		background: rgba(10, 13, 20, 0.8);
+		border: 1px dashed rgba(0, 240, 255, 0.3);
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1rem;
+		overflow: hidden;
+	}
+
+	.hud-grid-lines {
+		position: absolute;
+		inset: 0;
+		background-image: linear-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+						  linear-gradient(90deg, rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+		background-size: 20px 20px;
+	}
+
+	.hud-target-ring {
+		width: 80px;
+		height: 80px;
+		border: 2px stroke var(--accent-cyan);
+		border: 2px dashed var(--accent-cyan);
+		border-radius: 50%;
+		position: absolute;
+	}
+
+	.hud-popup-text {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		font-family: var(--font-hud);
+		font-weight: 800;
+		color: var(--accent-magenta);
+		font-size: 1.1rem;
+		text-shadow: var(--glow-magenta);
+	}
+
+	.hud-damage-pop {
+		position: absolute;
+		bottom: 25px;
+		left: 25px;
+		font-family: var(--font-hud);
+		font-weight: 700;
+		color: var(--accent-green);
+		font-size: 0.9rem;
+	}
+
+	.hud-footer {
+		display: flex;
+		justify-content: space-between;
+		font-family: var(--font-hud);
+		font-size: 0.65rem;
+		color: var(--text-dim);
+	}
+
+	/* Cards Grid */
+	.grid-3 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.75rem;
+	}
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.card-icon {
+		width: 48px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 6px;
+		margin-bottom: 0.5rem;
+	}
+
+	.cyan-icon {
+		background: rgba(0, 240, 255, 0.1);
+		color: var(--accent-cyan);
+		border: 1px solid rgba(0, 240, 255, 0.3);
+	}
+
+	.violet-icon {
+		background: rgba(138, 43, 226, 0.1);
+		color: #b566ff;
+		border: 1px solid rgba(138, 43, 226, 0.3);
+	}
+
+	.magenta-icon {
+		background: rgba(255, 0, 127, 0.1);
+		color: var(--accent-magenta);
+		border: 1px solid rgba(255, 0, 127, 0.3);
+	}
+
+	/* Mission Section */
+	.mission-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.mission-num {
+		font-family: var(--font-hud);
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: var(--accent-cyan);
+		margin-bottom: 0.5rem;
+	}
+
+	/* Partners Banner */
+	.partners-banner {
+		background: linear-gradient(135deg, rgba(18, 24, 36, 0.9) 0%, rgba(10, 13, 20, 0.95) 100%);
+		border: 1px solid var(--border-hud-active);
+		padding: 3rem;
+		text-align: center;
+	}
+
+	.partners-content {
+		max-width: 750px;
+		margin: 0 auto;
+	}
+
+	.partners-cta {
+		margin-top: 2rem;
+	}
+
+	/* Channels Grid */
+	.channels-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+		gap: 1.25rem;
+		margin-bottom: 2rem;
+	}
+
+	.channel-card {
+		background: var(--bg-card);
+		border: 1px solid var(--border-hud);
+		padding: 1.25rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		border-radius: 6px;
+		text-align: center;
+	}
+
+	.channel-icon {
+		color: var(--accent-cyan);
+	}
+
+	.channel-name {
+		font-weight: 700;
+		color: var(--text-main);
+	}
+
+	.channel-status {
+		font-family: var(--font-hud);
+		font-size: 0.7rem;
+		color: var(--text-dim);
+		background: rgba(255, 255, 255, 0.04);
+		padding: 0.2rem 0.5rem;
+		border-radius: 3px;
+	}
+
+	.channels-note {
+		text-align: center;
+		font-family: var(--font-hud);
+		font-size: 0.85rem;
+		color: var(--text-dim);
+	}
+
+	/* Responsive */
+	@media (max-width: 850px) {
+		.hero-container {
+			grid-template-columns: 1fr;
+		}
+		.hero-hud-graphic {
+			max-width: 450px;
+			margin: 0 auto;
+		}
+		.partners-banner {
+			padding: 2rem 1.5rem;
+		}
+	}
+</style>
