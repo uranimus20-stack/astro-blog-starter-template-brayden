@@ -1,0 +1,230 @@
+---
+// FightFormatPreview.astro
+// Static concept-visual section for the Vardena.tech homepage.
+// Shows three vertical fight-commentary preview frames (9:16 aspect ratio).
+// No links, no play buttons, no interactive overlays — concept visuals only.
+
+const cards = [
+	{
+		num: '01',
+		heading: 'Read the arena',
+		body: 'Track both fighters before the first exchange.',
+		src: '/media/fight-previews/fight-overview.jpg',
+		alt: 'Concept preview of robot fight commentary with opening round HUD',
+		featured: false,
+	},
+	{
+		num: '02',
+		heading: 'Call the impact',
+		body: 'Visualize damage, timing and momentum in real time.',
+		src: '/media/fight-previews/fight-impact.png',
+		alt: 'Concept preview of robot fight commentary showing a successful impact',
+		featured: true,
+	},
+	{
+		num: '03',
+		heading: 'Spot the defense',
+		body: 'Show the difference between a clean hit and a successful block.',
+		src: '/media/fight-previews/fight-block.jpg',
+		alt: 'Concept preview of robot fight commentary showing a successful block',
+		featured: false,
+	},
+];
+---
+
+<section
+	class="ffp-section section-padding"
+	aria-labelledby="ffp-heading"
+>
+	<div class="ffp-header section-header">
+		<p class="ffp-eyebrow">FORMAT PREVIEW — CONCEPT VISUALS</p>
+		<h2 id="ffp-heading">How the commentary works</h2>
+		<p class="ffp-lead">
+			Fight analysis that makes every exchange easy to follow — health bars,
+			impact calls, combos and defensive reads.
+		</p>
+	</div>
+
+	<div class="ffp-grid">
+		{cards.map((card) => (
+			<article class={`ffp-card${card.featured ? ' ffp-card--featured' : ''}`}>
+				<div class="ffp-img-wrap">
+					<img
+						src={card.src}
+						alt={card.alt}
+						class="ffp-img"
+						width="540"
+						height="960"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+				<div class="ffp-card-body">
+					<span class="ffp-num" aria-hidden="true">{card.num}</span>
+					<h3 class="ffp-card-heading">{card.heading}</h3>
+					<p class="ffp-card-text">{card.body}</p>
+				</div>
+			</article>
+		))}
+	</div>
+
+	<p class="ffp-disclaimer">
+		Concept visuals showing the planned Vardena commentary format.
+		They are not footage from a real event.
+	</p>
+</section>
+
+<style>
+	/* ── Section wrapper ── */
+	.ffp-section {
+		border-top: 1px solid rgba(0, 231, 244, 0.1);
+	}
+
+	/* ── Eyebrow label ── */
+	.ffp-eyebrow {
+		font-family: var(--font-hud);
+		font-size: 0.75rem;
+		letter-spacing: 0.12em;
+		color: #00e7f4;
+		text-transform: uppercase;
+		margin: 0 0 0.5rem;
+	}
+
+	/* ── Lead paragraph ── */
+	.ffp-lead {
+		font-size: 1rem;
+		color: #94a3b8;
+		max-width: 600px;
+		margin: 0.5rem auto 0;
+		line-height: 1.65;
+	}
+
+	/* ── Three-column grid ── */
+	.ffp-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+		margin-top: 3rem;
+		align-items: start;
+	}
+
+	/* ── Card base ── */
+	.ffp-card {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		transition: border-color 0.2s ease;
+	}
+
+	/* ── 9:16 image wrapper ── */
+	.ffp-img-wrap {
+		aspect-ratio: 9 / 16;
+		overflow: hidden;
+		border: 1px solid rgba(0, 231, 244, 0.24);
+		border-radius: 4px;
+		background: #0f1117;
+	}
+
+	.ffp-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top center;
+		display: block;
+	}
+
+	/* ── Card text area ── */
+	.ffp-card-body {
+		padding: 1rem 0.25rem 0;
+	}
+
+	.ffp-num {
+		display: inline-block;
+		font-family: var(--font-hud);
+		font-size: 0.75rem;
+		font-weight: 700;
+		color: #00e7f4;
+		letter-spacing: 0.08em;
+		margin-bottom: 0.35rem;
+	}
+
+	.ffp-card-heading {
+		font-size: clamp(1rem, 1.5vw, 1.2rem);
+		font-weight: 700;
+		color: #f0f4f8;
+		margin: 0 0 0.4rem;
+		line-height: 1.3;
+	}
+
+	.ffp-card-text {
+		font-size: 0.9rem;
+		color: #94a3b8;
+		margin: 0;
+		line-height: 1.55;
+	}
+
+	/* ── Featured (center) card: slight desktop lift ── */
+	@media (hover: hover) and (min-width: 851px) {
+		.ffp-card--featured {
+			transform: translateY(-14px);
+		}
+
+		.ffp-card--featured .ffp-img-wrap {
+			border-color: rgba(0, 231, 244, 0.5);
+		}
+	}
+
+	/* ── Hover: pointer devices only ── */
+	@media (hover: hover) {
+		.ffp-card:not(.ffp-card--featured):hover .ffp-img-wrap {
+			border-color: rgba(0, 231, 244, 0.45);
+		}
+
+		.ffp-card--featured:hover .ffp-img-wrap {
+			border-color: rgba(0, 231, 244, 0.7);
+		}
+	}
+
+	/* ── Disclaimer ── */
+	.ffp-disclaimer {
+		margin-top: 2.5rem;
+		text-align: center;
+		font-size: 0.8rem;
+		color: #64748b;
+		font-family: var(--font-hud);
+		letter-spacing: 0.02em;
+	}
+
+	/* ── Tablet: keep 3 cols, tighter gap, cancel lift ── */
+	@media (max-width: 900px) and (min-width: 601px) {
+		.ffp-grid {
+			gap: 16px;
+		}
+
+		.ffp-card--featured {
+			transform: none;
+		}
+	}
+
+	/* ── Mobile: single column, centered ── */
+	@media (max-width: 600px) {
+		.ffp-grid {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+			max-width: 340px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.ffp-card--featured {
+			transform: none;
+		}
+	}
+
+	/* ── Respect prefers-reduced-motion ── */
+	@media (prefers-reduced-motion: reduce) {
+		.ffp-card {
+			transition: none;
+		}
+	}
+</style>

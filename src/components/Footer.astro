@@ -6,7 +6,16 @@ const today = new Date();
 	<div class="footer-container">
 		<div class="footer-main">
 			<div class="footer-brand">
-				<span class="footer-logo"><span class="cyan">VAR</span>DENA<span class="magenta">.TECH</span></span>
+				<a href="/" class="footer-brand-link" aria-label="Vardena.tech — home">
+					<img
+						src="/brand/vardena-v-primary.svg"
+						alt="Vardena.tech"
+						class="footer-v-mark"
+						width="28"
+						height="28"
+					/>
+					<span class="footer-logo"><span class="cyan">VAR</span>DENA<span class="magenta">.TECH</span></span>
+				</a>
 				<p class="footer-tagline">Robotics, AI and humanoid robot combat.</p>
 			</div>
 			<div class="footer-nav">
@@ -58,6 +67,20 @@ const today = new Date();
 		font-weight: 800;
 		color: var(--text-main);
 		letter-spacing: 0.05em;
+	}
+
+	.footer-brand-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		text-decoration: none;
+	}
+
+	.footer-v-mark {
+		display: block;
+		height: 28px;
+		width: auto;
+		flex-shrink: 0;
 	}
 
 	.cyan { color: var(--accent-cyan); }

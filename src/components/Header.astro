@@ -4,8 +4,15 @@ import HeaderLink from './HeaderLink.astro';
 
 <header class="site-header">
 	<div class="header-container">
-		<a href="/" class="brand-logo">
-			<span class="logo-prefix">VAR</span>DENA<span class="logo-suffix">.TECH</span>
+		<a href="/" class="brand-logo" aria-label="Vardena.tech — home">
+			<img
+				src="/brand/vardena-v-primary.svg"
+				alt="Vardena.tech"
+				class="brand-v-mark"
+				width="32"
+				height="32"
+			/>
+			<span class="logo-wordmark"><span class="logo-prefix">VAR</span>DENA<span class="logo-suffix">.TECH</span></span>
 			<span class="hud-status" aria-hidden="true">[SYS_ONLINE]</span>
 		</a>
 		<nav class="nav-links" aria-label="Main Navigation">
@@ -52,6 +59,13 @@ import HeaderLink from './HeaderLink.astro';
 		gap: 0.6rem;
 		text-decoration: none;
 		line-height: 1;
+	}
+
+	.brand-v-mark {
+		display: block;
+		height: 32px;
+		width: auto;
+		flex-shrink: 0;
 	}
 
 	.brand-logo:hover {
@@ -102,6 +116,10 @@ import HeaderLink from './HeaderLink.astro';
 
 		.brand-logo {
 			font-size: 1.15rem;
+		}
+
+		.brand-v-mark {
+			height: 26px;
 		}
 
 		.nav-links {
